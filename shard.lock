@@ -8,3 +8,15 @@ shards:
     github: gdotdesign/cr-dotenv
     version: 0.1.0
 
+  hq:
+    github: maiha/hq.cr
+    version: 0.2.1
+
+  myhtml:
+    github: kostya/myhtml
+    version: 0.12
+
+  try:
+    github: maiha/try.cr
+    version: 0.2.0
+

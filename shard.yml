@@ -12,6 +12,9 @@ dependencies:
     github: gdotdesign/cr-dotenv
   discordcr:
     github: meew0/discordcr
+  hq:
+    github: maiha/hq.cr
+    version: 0.2.1
 
 # development_dependencies:
 #   webmock:
