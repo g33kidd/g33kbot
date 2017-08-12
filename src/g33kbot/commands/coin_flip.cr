@@ -4,11 +4,12 @@ class FlipCommand < Command
   # This command just randomizes between 1 and 0 and sends a message saying which
   # face the coin landed on.
 
-  prefix "!"
+  global_prefix true
   signature "flip"
+  description "This command just randomizes between 1 and 0 and \
+  sends a message saying which face the coin landed on."
 
-
-  def run(payload, client)
+  def run(runner, payload, client)
     Random.new_seed
     coin = Random.rand(2)
     coin_str = ""

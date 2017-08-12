@@ -1,8 +1,9 @@
 class CatsCommand < Command
-  prefix "!"
-  signature "cats"
+  global_prefix true
+  signature "cat"
+  description "Supposed to get a random image of a cat."
 
-  def run(payload, client)
+  def run(runner, payload, client)
     client.create_message payload.channel_id, "No cats here. Sorry! My fault."
   end
 end
