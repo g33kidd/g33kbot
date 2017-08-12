@@ -1,0 +1,10 @@
+name: duktape
+version: 0.11.0
+
+authors:
+  - Jesse Doyle <jdoyle@ualberta.ca>
+
+scripts:
+  postinstall: "make -C ext clean libduktape"
+
+license: MIT

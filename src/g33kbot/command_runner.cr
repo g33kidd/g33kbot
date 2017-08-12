@@ -23,6 +23,7 @@ class CommandRunner
     if client.get_current_user.id != payload.author.id
       command = find_command(payload.content)
       if !command.nil?
+        client.trigger_typing_indicator payload.channel_id
         command.as(Command).run(self, payload, client)
       end
     end
@@ -50,6 +51,16 @@ class CommandRunner
       end
     end
     command
+  end
+
+  def get_command_string(command)
+    prefix = nil
+    prefix = global_prefix if command.global_prefix?
+    prefix = command.prefix if !command.prefix.nil?
+
+    if !prefix.nil?
+      "#{prefix}#{command.signature}"
+    end
   end
 
   # Checks if a command responds to a can_run? method and returns the command if so.

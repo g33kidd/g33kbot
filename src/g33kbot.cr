@@ -22,7 +22,8 @@ runner = CommandRunner.new [
   FlipCommand.new,
   ContainsCommand.new,
   PrefixCommand.new,
-  HelpCommand.new
+  HelpCommand.new,
+  JavascriptEvalCommand.new
 ]
 
 # Client events

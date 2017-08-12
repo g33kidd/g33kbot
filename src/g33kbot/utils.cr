@@ -15,4 +15,10 @@ module Utils
     end
   end
 
+  # Removes the Command string from the given content
+  def strip_command(runner, command, content)
+    command_string = runner.get_command_string(command)
+    content.not_nil!.strip("#{command_string}")
+  end
+
 end
