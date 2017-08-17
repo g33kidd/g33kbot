@@ -3,7 +3,37 @@ require "dotenv"
 
 require "./g33kbot/**"
 
+struct Action
+  JSON.mapping(
+    slug: {type: String, nilable: true},
+    done: {type: Bool, nilable: true},
+    reply: {type: String, nilable: true}
+  )
+end
+struct Results
+  JSON.mapping(
+    action: {type: Action, nilable: true},
+    replies: {type: Array(String), nilable: true},
+    conversation_token: {type: String, nilable: true}
+  )
+end
+struct Response
+  JSON.mapping(
+    results: {type: Results, nilable: false}
+  )
+end
+
 # TODO: Support aliases in the command runner.
+# TODO: Merge code for Recast into the bot.
+# In order to do that we might need to reorganize how we handle messages, since
+# recast maintains a conversation. We also don't want to have to mention the bot
+# every time we want to chat with it.
+#
+# IF we're doing a conversation, other commands like contains might interfere.
+# We don't want that.
+#
+# May a priority for commands?
+# ¯\_(ツ)_/¯
 
 # Loads our .env file.
 hash = Dotenv.load
@@ -16,12 +46,12 @@ client = Discord::Client.new(token: "Bot #{token}", client_id: 34502846804158056
 
 # TODO: Make it easier to add commands, like preloading commands... ¯\_(ツ)_/¯
 runner = CommandRunner.new [
+  RecastController.new,
   PingCommand.new,
   TestCommand.new,
   CatsCommand.new,
   WowCommand.new,
   FlipCommand.new,
-  ContainsCommand.new,
   PrefixCommand.new,
   HelpCommand.new,
   JavascriptEvalCommand.new,
@@ -29,26 +59,12 @@ runner = CommandRunner.new [
 
 # Client events
 client.on_message_create do |payload|
-  runner.run payload, client
+  if payload.content.starts_with? "??"
+    # client.create_message payload.channel_id, emojify(":)")
+  else
+    runner.run payload, client
+  end
 end
-
-# Twitch websocket connection.
-# websocket = HTTP::WebSocket.new URI.parse("wss://pubsub-edge.twitch.tv")
-# websocket.on_binary do |bytes|
-#   puts bytes
-# end
-# websocket.on_message do |message|
-#   puts message
-# end
-# websocket.on_close do |message|
-#   puts message
-# end
-# websocket.on_pong do |thing|
-#   puts thing
-# end
-# websocket.send /
-# websocket.run
-# websocket.ping
 
 # Start the bot
 client.run

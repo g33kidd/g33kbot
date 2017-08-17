@@ -32,8 +32,8 @@ class JavascriptEvalCommand < Command
     end
   end
 
-  def can_run?(content)
-    if content.starts_with?("```js") && content.ends_with?("```")
+  def can_run?(payload, client)
+    if payload.content.starts_with?("```js") && payload.content.ends_with?("```")
       true
     else
       false

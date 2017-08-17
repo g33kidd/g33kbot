@@ -45,4 +45,11 @@ class Command
   def global_prefix?
     @uses_global_prefix
   end
+
+  def emojify(content)
+    content.gsub ":D", ":smile:"
+    content.gsub ":)", ":smiley:"
+    content.gsub "<3", ":heart:"
+    content.gsub ":(", ":frowning:"
+  end
 end

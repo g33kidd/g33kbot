@@ -21,7 +21,7 @@ class CommandRunner
   def run(payload, client)
     # ignore messages sent by this bot.
     if client.get_current_user.id != payload.author.id
-      command = find_command(payload.content)
+      command = find_command(payload, client)
       if !command.nil?
         client.trigger_typing_indicator payload.channel_id
         command.as(Command).run(self, payload, client)
@@ -41,13 +41,13 @@ class CommandRunner
   end
 
   # finds a command that is able to run given the content of the message.
-  def find_command(content) : (Nil | Command)
+  def find_command(payload, client) : (Nil | Command)
     command = nil
     if !@commands.nil?
       @commands.not_nil!.each do |c|
-        command = c if command_using_prefix?(c, content)
-        command = c if command_using_global_prefix?(c, content)
-        command = c if command_can_run?(c, content)
+        command = c if command_using_prefix?(c, payload.content)
+        command = c if command_using_global_prefix?(c, payload.content)
+        command = c if command_can_run?(c, payload, client)
       end
     end
     command
@@ -64,8 +64,8 @@ class CommandRunner
   end
 
   # Checks if a command responds to a can_run? method and returns the command if so.
-  def command_can_run?(command : Command, content) : Bool
-    command.responds_to?(:can_run?) && command.can_run?(content)
+  def command_can_run?(command : Command, payload, client) : Bool
+    command.responds_to?(:can_run?) && command.can_run?(payload, client) ? true : false
   end
 
   # Checks if a command has prefix and signature set, if so, return the command.

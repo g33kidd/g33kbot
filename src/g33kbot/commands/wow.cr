@@ -3,8 +3,8 @@ class WowCommand < Command
     client.create_message payload.channel_id, "Holy cow!"
   end
 
-  def can_run?(content) : Bool
-    if content.includes? "Wow!"
+  def can_run?(payload, client) : Bool
+    if payload.content.includes? "Wow!"
       true
     else
       false
