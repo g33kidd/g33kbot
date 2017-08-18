@@ -18,6 +18,10 @@ dependencies:
   duktape:
     github: jessedoyle/duktape.cr
     version: ~> 0.11.0
+  CrystalIrc:
+    github: Meoowww/CrystalIrc
+  rollable:
+    github: Nephos/crystal_rollable
 
 # development_dependencies:
 #   webmock:

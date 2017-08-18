@@ -29,17 +29,6 @@ class CommandRunner
     end
   end
 
-  # Gets all prefixes within all commands as an Array.
-  def get_prefixes : Array(String)
-    prefixes = [] of String
-    @commands.each do |c|
-      if !c.as(Command).prefix.nil?
-        prefixes.push(c.as(Command).prefix.as(String))
-      end
-    end
-    prefixes
-  end
-
   # finds a command that is able to run given the content of the message.
   def find_command(payload, client) : (Nil | Command)
     command = nil
@@ -88,7 +77,8 @@ class CommandRunner
   # Does the command use a Global Prefix?
   def command_using_global_prefix?(command : Command, content) : Bool
     if command.global_prefix?
-      if content.not_nil!.strip("#{@global_prefix}").starts_with? "#{command.signature}"
+      if content.not_nil!.starts_with? "#{@global_prefix}#{command.signature}"
+        puts "#{content} uses global prefix"
         true
       else
         false

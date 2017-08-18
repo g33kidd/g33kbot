@@ -1,5 +1,9 @@
 version: 1.0
 shards:
+  CrystalIrc:
+    github: Meoowww/CrystalIrc
+    commit: 30a8fa2b15ef9fc48ff781598a6081492204ab5c
+
   discordcr:
     github: meew0/discordcr
     version: 0.3.0

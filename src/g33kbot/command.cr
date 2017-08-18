@@ -4,6 +4,7 @@ abstract class Command
   @aliases            : Array(String)?
   @uses_global_prefix : Bool?
   @description        : String?
+  @bot                : Bot?
 
   @uses_global_prefix = false
   @description        = "Default description for a command until descriptions for all commands are set."
@@ -26,6 +27,10 @@ abstract class Command
 end
 
 class Command
+  def bind(bot : Bot)
+    @bot = bot
+  end
+
   def prefix
     @prefix
   end
