@@ -3,16 +3,23 @@ class RecastController < Command
   @recast_client : HTTP::Client
   @recast_header : HTTP::Headers
 
+  description "Chat with bot."
+
+  rules do |payload|
+    mentions = payload.mentions.any? { |m| m.id == @bot.client.get_current_user.id ? true : false }
+    has_conversation?(payload.author.id) || mentions ? true : false
+  end
+
   def initialize
     @conversations = {} of UInt64 => String
     @recast_client = HTTP::Client.new "api.recast.ai", tls: true
     @recast_header = HTTP::Headers{
       "Authorization" => "Token #{ENV["RECAST"]}",
-      "Content-Type" => "application/json"
+      "Content-Type"  => "application/json",
     }
   end
 
-  def run(runner, payload, client)
+  handle do |payload, client|
     # TODO: Replace this with Regex to remove all mentions...
     # TODO: Maybe create a global message handler that handles all messages no matter
     # what. It's possible this message handler could be used to respond to the entire
@@ -32,7 +39,7 @@ class RecastController < Command
           end_conversation payload.author.id
         end
 
-        handle(results, payload, client)
+        handle_conversation(results, payload, client)
       else
         client.create_message payload.channel_id, "Okay, I'll stop chatting with you."
         end_conversation payload.author.id
@@ -44,11 +51,11 @@ class RecastController < Command
         update_conversation(payload.author.id, results.conversation_token.not_nil!)
       end
 
-      handle(results, payload, client)
+      handle_conversation(results, payload, client)
     end
   end
 
-  def handle(results, payload, client)
+  def handle_conversation(results, payload, client)
     pp results
 
     if !results.action.nil? && !results.action.not_nil!.reply.nil?
@@ -86,7 +93,5 @@ class RecastController < Command
   end
 
   def can_run?(payload, client)
-    mentions = payload.mentions.any? { |m| m.id == client.get_current_user.id ? true : false }
-    has_conversation?(payload.author.id) || mentions ? true : false
   end
 end

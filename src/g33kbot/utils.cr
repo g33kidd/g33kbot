@@ -1,5 +1,4 @@
 module Utils
-
   def contains_any?(content, strings : Array(String)) : Bool
     arr = [] of String
     strings.each do |s|
@@ -20,5 +19,4 @@ module Utils
     command_string = runner.get_command_string(command)
     content.not_nil!.strip("#{command_string}")
   end
-
 end

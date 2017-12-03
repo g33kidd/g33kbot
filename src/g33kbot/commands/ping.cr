@@ -1,9 +1,9 @@
 class PingCommand < Command
   global_prefix true
   signature "ping"
-  description "Pong? Ping? What?"
+  description "Ping? PONG!"
 
-  def run(runner, payload, client)
+  handle do |payload, client|
     client.create_message payload.channel_id, "PONG!! Wow!"
   end
 end

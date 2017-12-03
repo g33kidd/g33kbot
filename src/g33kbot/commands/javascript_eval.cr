@@ -8,9 +8,16 @@ require "duktape/runtime"
 class JavascriptEvalCommand < Command
   include Utils
 
-  description "Creates a javascript sandbox and runs some code. This command is completely fucked."
+  description "Runs some JS"
+  # starts_with "```js"
+  # ends_with "```"
 
-  def run(runner, payload, client)
+  rules do |payload|
+    return payload.content.starts_with?("```js") &&
+      payload.content.ends_with?("```")
+  end
+
+  handle do |payload, client|
     # Creats a sandbox with 100ms timeout.
     sandbox = Duktape::Sandbox.new 100
     sandbox.push_global_object
@@ -29,14 +36,6 @@ class JavascriptEvalCommand < Command
     rescue err : Duktape::Error
       client.create_message payload.channel_id, "Whoops... there was an error \
       trying to run your code \n `#{err}`"
-    end
-  end
-
-  def can_run?(payload, client)
-    if payload.content.starts_with?("```js") && payload.content.ends_with?("```")
-      true
-    else
-      false
     end
   end
 end

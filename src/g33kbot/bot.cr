@@ -1,17 +1,16 @@
 class Bot
   @client : Discord::Client
-  @cache  : Discord::Cache
+  @cache : Discord::Cache
   @commands : Array(Command)
-  @plugins  : Array(Plugin)
 
   def initialize
     @client = Discord::Client.new token: "Bot #{ENV["TOKEN"]}", client_id: 345028468041580564_u64
-    @cache  = Discord::Cache.new @client
+    @cache = Discord::Cache.new @client
 
     @commands = [] of Command
-    @plugins  = [] of Plugin
+    @signatures = [] of String
 
-    @prefix = "??"
+    @prefix = "$"
   end
 
   def start
@@ -25,14 +24,31 @@ class Bot
     @client.run
   end
 
+  def client
+    @client
+  end
+
+  def commands
+    @commands
+  end
+
+  def cache
+    @cache
+  end
+
+  def prefix
+    @prefix
+  end
+
   def add_command(command : Command)
     command.bind self
     @commands << command
   end
 
-  def add_plugin(plugin : Plugin)
-    plugin.bind self
-    @plugins << plugin
+  def add_commands(commands : Array(Command))
+    commands.each do |command|
+      add_command(command)
+    end
   end
 
   def reply(payload, message)
@@ -40,15 +56,18 @@ class Bot
   end
 
   def handle_ready(payload)
+    puts "Client ready..."
   end
 
   def handle_resume(payload)
+    puts "Client resume..."
   end
 
   def handle_message_create(payload)
-    if @client.get_current_user.id != payload.author.id
-      @plugins.each { |p| p.handle(payload) }
-      @commands.each { |c| c.handle(payload) }
+    if !payload.author.bot
+      @commands.each do |command|
+        command.run(payload, @client)
+      end
     end
   end
 
@@ -63,5 +82,4 @@ class Bot
 
   def handle_presence_update(payload)
   end
-
 end

@@ -1,13 +1,9 @@
 class PrefixCommand < Command
   global_prefix true
   signature "prefix"
-  description "Outputs a list of all command prefixes used."
+  description "Lists prefixes."
 
-  def run(runner, payload, client)
-    prefix_list = runner.get_prefixes.uniq.join(", ")
-    client.create_message(
-      payload.channel_id,
-      "The global prefix is #{runner.global_prefix}.\nOther prefixes include: #{prefix_list}"
-    )
+  handle do |payload, client|
+    client.create_message payload.channel_id, "this doesn't work right now."
   end
 end

@@ -6,10 +6,9 @@ class FlipCommand < Command
 
   global_prefix true
   signature "flip"
-  description "This command just randomizes between 1 and 0 and \
-  sends a message saying which face the coin landed on."
+  description "Flips a coin."
 
-  def run(runner, payload, client)
+  handle do |payload, client|
     Random.new_seed
     coin = Random.rand(2)
     coin_str = ""

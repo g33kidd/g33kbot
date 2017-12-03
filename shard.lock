@@ -24,6 +24,10 @@ shards:
     github: kostya/myhtml
     version: 0.12
 
+  rollable:
+    github: Nephos/crystal_rollable
+    version: 0.1.4
+
   try:
     github: maiha/try.cr
     version: 0.2.0

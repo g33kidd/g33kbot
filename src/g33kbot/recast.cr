@@ -6,6 +6,7 @@ struct Action
     reply: {type: String, nilable: true}
   )
 end
+
 struct Results
   JSON.mapping(
     action: {type: Action, nilable: true},
@@ -13,6 +14,7 @@ struct Results
     conversation_token: {type: String, nilable: true}
   )
 end
+
 struct Response
   JSON.mapping(
     results: {type: Results, nilable: false}

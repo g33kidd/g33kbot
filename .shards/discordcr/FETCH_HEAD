@@ -1,9 +1,9 @@
-a24d6a31af2db54f69415d1e6e9ac95a0e7d8a50	not-for-merge	branch 'bugfix/60' of https://github.com/meew0/discordcr
-98d2d6e0a03d8b652d2b9ae6c7a3a6b2f82a30c4	not-for-merge	branch 'bugfix/broken-status' of https://github.com/meew0/discordcr
+9f02cff6077f56aa1a2de28023d703fa956d61a4	not-for-merge	branch 'bugfix/60' of https://github.com/meew0/discordcr
+96e50d8191f71a2d26e859a24edf5b33c055add2	not-for-merge	branch 'bugfix/broken-status' of https://github.com/meew0/discordcr
 1a3f0a837bfa6e1b54a520288f1a33aef2c3e784	not-for-merge	branch 'bugfix/converter-parameter-types' of https://github.com/meew0/discordcr
 f86dcd9d5ab9d0e6bd3cd21f41cff6471ae9ef5d	not-for-merge	branch 'bugfix/embed-image-nilable' of https://github.com/meew0/discordcr
 37f56e8ff39ead761580c037cb33a0b601dff675	not-for-merge	branch 'bugfix/game-mapping' of https://github.com/meew0/discordcr
-0d074750ede31ef650bddcbf349b72ce2da9095c	not-for-merge	branch 'bugfix/heartbeat-fixes' of https://github.com/meew0/discordcr
+955834eafa12756621781b949e0f881dce9efea4	not-for-merge	branch 'bugfix/heartbeat-fixes' of https://github.com/meew0/discordcr
 4ce90dcfb443a37a994d0116bb41bbf1edfd1e9d	not-for-merge	branch 'bugfix/resume-fixes' of https://github.com/meew0/discordcr
 fce2825b4e95bc42082dd106553437255cb569d6	not-for-merge	branch 'bugfix/travis-tag-build' of https://github.com/meew0/discordcr
 6ecb6fa1db0addf09f0355e886007ff9ed1132b9	not-for-merge	branch 'docs/rest-abstractions' of https://github.com/meew0/discordcr
@@ -15,9 +15,21 @@ de83579e22dee92e62bfae1a5950ed5f0ec8fd19	not-for-merge	branch 'feature/raw-dispa
 8a8d1072b1f61b1054fb791bd38577a01000dfa2	not-for-merge	branch 'feature/upload-file' of https://github.com/meew0/discordcr
 7223ef9436aff20cdc85685f48d1095bfddaa6d9	not-for-merge	branch 'feature/us-aliases' of https://github.com/meew0/discordcr
 bb5c84f375acb6e8d04e629abf5e86c783ef3ad7	not-for-merge	branch 'feature/voice' of https://github.com/meew0/discordcr
-f6f303fb210a74e3bae5871be8d48c369a9ce466	not-for-merge	branch 'gh-pages' of https://github.com/meew0/discordcr
-33efc275a3255561345eb4b7052ce5f73d8efd3a	not-for-merge	branch 'master' of https://github.com/meew0/discordcr
+508fcb1908e74167ee46433c4c1f03e29c0fb2aa	not-for-merge	branch 'gh-pages' of https://github.com/meew0/discordcr
+f2776e88447beb2db6c9378d4b617926526012b3	not-for-merge	branch 'master' of https://github.com/meew0/discordcr
 cf2e5cd472ebd86d5632bae23275eca926c558f5	not-for-merge	'refs/pull/1/head' of https://github.com/meew0/discordcr
+92524dfe3aa9c45b0efb78135455752018c17270	not-for-merge	'refs/pull/100/head' of https://github.com/meew0/discordcr
+e15b651ac173c170ce6f6de05a58d85bc6ce8959	not-for-merge	'refs/pull/100/merge' of https://github.com/meew0/discordcr
+ddc7abcb1ebd644dd9474878fbf5ebb6aadf0dc6	not-for-merge	'refs/pull/101/head' of https://github.com/meew0/discordcr
+8f62a74395aecddb0dda1f58fcdc9c02e74e27fb	not-for-merge	'refs/pull/101/merge' of https://github.com/meew0/discordcr
+adf73a4a1b6ae6a7a0f00ab05a43178ae2c42209	not-for-merge	'refs/pull/102/head' of https://github.com/meew0/discordcr
+af035c9fe144eb01f2103aad5d9abc1a1b05c82f	not-for-merge	'refs/pull/102/merge' of https://github.com/meew0/discordcr
+d3be8b504cbcb7f954b3f66d06f31cf295cf6c07	not-for-merge	'refs/pull/103/head' of https://github.com/meew0/discordcr
+101a8a48c2efe3c645eff9ac60625069d7a34329	not-for-merge	'refs/pull/103/merge' of https://github.com/meew0/discordcr
+d3647a330fdd859393b921a595c830add8b42930	not-for-merge	'refs/pull/104/head' of https://github.com/meew0/discordcr
+7f53afd3508e8ef0a184b4d6882f96b0b07fa5d8	not-for-merge	'refs/pull/104/merge' of https://github.com/meew0/discordcr
+3459addbf3ec16ef5df80bcf4c8b16d59f5557f3	not-for-merge	'refs/pull/105/head' of https://github.com/meew0/discordcr
+e1886824732f847144091b00c120588474bc1c06	not-for-merge	'refs/pull/105/merge' of https://github.com/meew0/discordcr
 8c820406b2cc992bdb44f8dbb23abe17e7ec5de8	not-for-merge	'refs/pull/12/head' of https://github.com/meew0/discordcr
 63e768f21579a739aa263932a2331ae1bbcfc8f2	not-for-merge	'refs/pull/13/head' of https://github.com/meew0/discordcr
 a956b1c701e2cbbabc9025a3a9f23c35bc59b363	not-for-merge	'refs/pull/14/head' of https://github.com/meew0/discordcr
@@ -63,27 +75,47 @@ bb5c84f375acb6e8d04e629abf5e86c783ef3ad7	not-for-merge	'refs/pull/56/head' of ht
 27432e5cd62525986f4e258a20fc453102169884	not-for-merge	'refs/pull/58/head' of https://github.com/meew0/discordcr
 3bad51d179795af8cd3db1c6b6ced5945dd835bf	not-for-merge	'refs/pull/61/head' of https://github.com/meew0/discordcr
 2ba66375c9156e323ec11792ab9bfe5decc65305	not-for-merge	'refs/pull/62/head' of https://github.com/meew0/discordcr
-b88e947ebd155af10510c79615445d81f35b0ef8	not-for-merge	'refs/pull/62/merge' of https://github.com/meew0/discordcr
-909cce73222e4fa90d7aa3adf90609c97b7b098b	not-for-merge	'refs/pull/63/head' of https://github.com/meew0/discordcr
-721e54de909fa161c907522223c204ddc624829f	not-for-merge	'refs/pull/63/merge' of https://github.com/meew0/discordcr
+4dc9d0f6dbfb13a7d944fb9c76729bf44e1b9ab6	not-for-merge	'refs/pull/63/head' of https://github.com/meew0/discordcr
 7a6808000af20a2fcfe0620bbb008b5e54267467	not-for-merge	'refs/pull/64/head' of https://github.com/meew0/discordcr
-182bfd3cb41a9fe8860c777e741b0d5e2e5c2d7c	not-for-merge	'refs/pull/64/merge' of https://github.com/meew0/discordcr
+173765982aa21c168990f4e6ed4a510d800c06c7	not-for-merge	'refs/pull/64/merge' of https://github.com/meew0/discordcr
 31a6dbe97afced4aa3bcb5d4f8c36788fc102c5d	not-for-merge	'refs/pull/66/head' of https://github.com/meew0/discordcr
 c514cd3357084c8548e808f9155b41630bc90967	not-for-merge	'refs/pull/67/head' of https://github.com/meew0/discordcr
 99b07860fefcd9b0c9a04284170f1b3de78dd091	not-for-merge	'refs/pull/68/head' of https://github.com/meew0/discordcr
 7051688084789715042be338093a9d6acf5066e4	not-for-merge	'refs/pull/68/merge' of https://github.com/meew0/discordcr
 ce400f9317466e8a65f38de8cc9d1fd08408062f	not-for-merge	'refs/pull/69/head' of https://github.com/meew0/discordcr
-1404fcc1be45c80f9fb62e570ff334e3513e1c68	not-for-merge	'refs/pull/69/merge' of https://github.com/meew0/discordcr
-0d074750ede31ef650bddcbf349b72ce2da9095c	not-for-merge	'refs/pull/75/head' of https://github.com/meew0/discordcr
-867af122a22be1abe05dc45bd7872fa73b312880	not-for-merge	'refs/pull/75/merge' of https://github.com/meew0/discordcr
-98d2d6e0a03d8b652d2b9ae6c7a3a6b2f82a30c4	not-for-merge	'refs/pull/76/head' of https://github.com/meew0/discordcr
-8b1716db0bde5dc4c5664c548e62d688a0618b87	not-for-merge	'refs/pull/76/merge' of https://github.com/meew0/discordcr
+955834eafa12756621781b949e0f881dce9efea4	not-for-merge	'refs/pull/75/head' of https://github.com/meew0/discordcr
+96e50d8191f71a2d26e859a24edf5b33c055add2	not-for-merge	'refs/pull/76/head' of https://github.com/meew0/discordcr
 69dd614df49fe7c5c0772124bed82846b10de13c	not-for-merge	'refs/pull/77/head' of https://github.com/meew0/discordcr
-03a15e678996ac679fde8d3e2cc0bfbe09394fbf	not-for-merge	'refs/pull/77/merge' of https://github.com/meew0/discordcr
-a24d6a31af2db54f69415d1e6e9ac95a0e7d8a50	not-for-merge	'refs/pull/78/head' of https://github.com/meew0/discordcr
-b8db30661569f7645283657f5b09062eda4e345c	not-for-merge	'refs/pull/78/merge' of https://github.com/meew0/discordcr
+77ac32102897a514376cff5e8a9fc0856911cd97	not-for-merge	'refs/pull/77/merge' of https://github.com/meew0/discordcr
+9f02cff6077f56aa1a2de28023d703fa956d61a4	not-for-merge	'refs/pull/78/head' of https://github.com/meew0/discordcr
 fce2825b4e95bc42082dd106553437255cb569d6	not-for-merge	'refs/pull/79/head' of https://github.com/meew0/discordcr
-bdb8ac14173074660d5d8c093785a256f535adb5	not-for-merge	'refs/pull/79/merge' of https://github.com/meew0/discordcr
+6cd7d9aaf8bb5468a183bae24735e1e4e46ee44c	not-for-merge	'refs/pull/80/head' of https://github.com/meew0/discordcr
+521922d9565cef7f1172a2414a264eaeb97d9dcf	not-for-merge	'refs/pull/80/merge' of https://github.com/meew0/discordcr
+6d0a322ec9e45df187a56748fe915c08150154c0	not-for-merge	'refs/pull/81/head' of https://github.com/meew0/discordcr
+ae2e6ac8ef7c139d8b143f636c56c2d42d8d1e5d	not-for-merge	'refs/pull/81/merge' of https://github.com/meew0/discordcr
+253db72455b99d5da94e5ae902cc3a26853305d3	not-for-merge	'refs/pull/82/head' of https://github.com/meew0/discordcr
+122d5b21e321e1ac7eae729bc83529d2ffd0e7e3	not-for-merge	'refs/pull/83/head' of https://github.com/meew0/discordcr
+77d8262041d721c7787fa2e9da0a140d64bef40f	not-for-merge	'refs/pull/84/head' of https://github.com/meew0/discordcr
+4c7746bd9debc9ae890613a80a19a57e8744a429	not-for-merge	'refs/pull/85/head' of https://github.com/meew0/discordcr
+3bb0716a709f9b91e5dc8e3073408a285a5297d2	not-for-merge	'refs/pull/86/head' of https://github.com/meew0/discordcr
+24463cd1b2f7b84bd496544499a32b802f4994d6	not-for-merge	'refs/pull/87/head' of https://github.com/meew0/discordcr
+53aa0a6423260a0edc69cae7c113a97fa6823de0	not-for-merge	'refs/pull/87/merge' of https://github.com/meew0/discordcr
+628f7d98095da35c1de0b9bb217e9fe303bf0b6f	not-for-merge	'refs/pull/88/head' of https://github.com/meew0/discordcr
+7dc248b8448a36220dae6a1b487248437be65962	not-for-merge	'refs/pull/91/head' of https://github.com/meew0/discordcr
+7b261aa1d0189ce9dd7b63633705d171e7222370	not-for-merge	'refs/pull/91/merge' of https://github.com/meew0/discordcr
+3a7578251e06aa6f28dc35d00b61e0747ea3d095	not-for-merge	'refs/pull/92/head' of https://github.com/meew0/discordcr
+2c5f1d93c70c5d9e5a92b3ae27567566c9bf535f	not-for-merge	'refs/pull/92/merge' of https://github.com/meew0/discordcr
+cf260f7718dedc44807e5f022dc4d62d53efa166	not-for-merge	'refs/pull/94/head' of https://github.com/meew0/discordcr
+bba679b4e78bb85306a2289849d033e98ba23b71	not-for-merge	'refs/pull/94/merge' of https://github.com/meew0/discordcr
+0d8a20c0f9aaa0167f3784b8f337be4e8e17ebdf	not-for-merge	'refs/pull/95/head' of https://github.com/meew0/discordcr
+fc23b2edc4b1d22c1f8a89996831435d65ad138a	not-for-merge	'refs/pull/95/merge' of https://github.com/meew0/discordcr
+39eab7ad8aeef19e0a22ec0a2e06a63b4ed525e1	not-for-merge	'refs/pull/96/head' of https://github.com/meew0/discordcr
+abec196c9c12107544ca3e0de79966f72eb6a97d	not-for-merge	'refs/pull/96/merge' of https://github.com/meew0/discordcr
+847e6520e0153eda372529f690049ef57cc0d2ef	not-for-merge	'refs/pull/97/head' of https://github.com/meew0/discordcr
+31e1a32cf4727a2584c03a0fca828f0c08d072de	not-for-merge	'refs/pull/97/merge' of https://github.com/meew0/discordcr
+061564b9a08cd2d5909638980665fbe8ec3e29a8	not-for-merge	'refs/pull/98/head' of https://github.com/meew0/discordcr
+c750809169ac57c2e419cef83b8e6b007b04003a	not-for-merge	'refs/pull/99/head' of https://github.com/meew0/discordcr
+e2cb2abc1a85a80c78434622d0998cff4f2d1a20	not-for-merge	'refs/pull/99/merge' of https://github.com/meew0/discordcr
 cc469a1414372d8e414e69ce05c5c7762832eafd	not-for-merge	tag 'v0.1.0' of https://github.com/meew0/discordcr
 d73fd09af28c2861cbbdfa877dc23e97144e244a	not-for-merge	tag 'v0.1.1' of https://github.com/meew0/discordcr
 5182003b2d56e01d2094fd0204228f25820fdb28	not-for-merge	tag 'v0.2.0' of https://github.com/meew0/discordcr

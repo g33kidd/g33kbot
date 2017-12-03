@@ -1,13 +1,9 @@
 class WowCommand < Command
-  def run(runner, payload, client)
-    client.create_message payload.channel_id, "Holy cow!"
-  end
+  global_prefix true
+  signature "wow"
+  description "Wow!"
 
-  def can_run?(payload, client) : Bool
-    if payload.content.includes? "Wow!"
-      true
-    else
-      false
-    end
+  handle do |payload, client|
+    client.create_message payload.channel_id, "Holy cow!"
   end
 end
